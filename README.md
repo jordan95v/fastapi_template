@@ -4,12 +4,18 @@ Template for a FastAPI app.
 
 <h2>Table of contents</h2>
 
+- [Technical stack](#technical-stack)
 - [Installation](#installation)
 - [Usage](#usage)
   - [Environment variables](#environment-variables)
   - [Running the server](#running-the-server)
   - [Running the tests](#running-the-tests)
 - [License](#license)
+
+## Technical stack
+
+- [FastAPI](https://fastapi.tiangolo.com/): Web framework.
+- [SQLModel](https://sqlmodel.tiangolo.com/): ORM.  
 
 ## Installation
 
@@ -59,6 +65,8 @@ Run the following command to run the tests:
 ```
 
 The tests will run and show the results in the terminal, including the coverage.
+
+The default configuration is to run the tests with coverage. You can change this by modifying the `pyproject.toml` file in the `[tool.pytest.ini_options]` section.
 
 ## License
 

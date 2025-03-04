@@ -27,7 +27,7 @@ async def lifespan(app: FastAPI) -> AsyncGenerator[None, None]:
 app: FastAPI = FastAPI(lifespan=lifespan)
 
 
-@app.get("/health_check", tags=["healthcheck"])
+@app.get("/healthcheck", tags=["healthcheck"])
 def health_check(request: Request) -> dict[str, str]:
     """Health check endpoint. This endpoint is used to verify that the server is up.
 
