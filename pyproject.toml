@@ -39,6 +39,9 @@ dev = [
     "pytest-mock",
     "python-dotenv",
 ]
+mail = [
+    "fastapi-mail",
+]
 
 [tool.pytest.ini_options]
 addopts = "-vv --tb=short --cov=core --cov-report=term-missing"
