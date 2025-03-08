@@ -7,7 +7,7 @@ app: FastAPI = FastAPI()
 
 @app.get("/healthcheck", tags=["healthcheck"])
 def health_check(request: Request) -> dict[str, str]:
-    """Health check endpoint. This endpoint is used to verify that the server is up.
+    """This endpoint is used to verify that the server is up.
 
     Args:
         request : The incoming HTTP request.

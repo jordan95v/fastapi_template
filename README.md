@@ -9,7 +9,9 @@ Template for a FastAPI app.
 - [Usage](#usage)
   - [Environment variables](#environment-variables)
   - [Running the server](#running-the-server)
+    - [Docs](#docs)
   - [Running the tests](#running-the-tests)
+- [Docker](#docker)
 - [License](#license)
 
 ## Technical stack
@@ -54,6 +56,18 @@ you@machine:~$ source venv/bin/activate # venv\Scripts\activate on Windows
 (venv) you@machine:~$ fastapi run core/main.py
 ```
 
+You can also start the development server with the following command:
+
+```bash
+(venv) you@machine:~$ fastapi dev core/main.py
+```
+
+The server will start and you can access it by going to `http://127.0.0.1:8000`.
+
+#### Docs
+
+FastAPI generates automatic documentation for the API.
+
 You can access docs by going to `<server_url>/docs`.
 
 ### Running the tests
@@ -67,6 +81,15 @@ Run the following command to run the tests:
 The tests will run and show the results in the terminal, including the coverage.
 
 The default configuration is to run the tests with coverage. You can change this by modifying the `pyproject.toml` file in the `[tool.pytest.ini_options]` section.
+
+## Docker
+
+You can run the project with Docker. Run the following commands to build and run the project locally:
+
+```bash
+you@machine:~$ docker build -t fastapi-template .
+you@machine:~$ docker run -p 8000:8000 --env-file .env fastapi-template
+```
 
 ## License
 
